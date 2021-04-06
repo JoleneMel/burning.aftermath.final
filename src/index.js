@@ -3,10 +3,12 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import NavLinkRouter from './components/NavLinkRouter';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <NavLinkRouter />,
+    <App />,
   </React.StrictMode>,
   document.getElementById('root')
 );

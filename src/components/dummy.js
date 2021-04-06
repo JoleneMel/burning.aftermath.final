@@ -122,15 +122,17 @@ Alignment: {this.props.alignment} HP: {this.props.hp}  Path: {this.props.path}
 </Card.Body>
 
 
-
+Weight: {this.props.weight} 
 
 , height, weight, alignment, race, strength, dexterity, consititiution, intelligence, wisdom, charisma, hp, lanuages, path, extraInfo
 
 
 within edit 
+alignment: props.alignment,
+
 height: props.height,
 weight: props.weight,
-alignment: props.alignment,
+
 race: props.race,
 strength: props.strength,
 dexterity: props.dexterity,

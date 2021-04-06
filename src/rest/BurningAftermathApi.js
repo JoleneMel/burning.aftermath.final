@@ -16,7 +16,7 @@ class BurningAftermathService {
                 name: character.name,
                 height: character.height,
                 weight: character.weight,
-                alignment: character.alignment,
+                // alignment: character.alignment,
                 race: character.race,
                 strength: character.strength,
                 dexterity: character.dexterity,
