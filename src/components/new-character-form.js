@@ -1,7 +1,9 @@
 import React, { useState } from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Container from 'react-bootstrap/Container';
 
+//step by step wizard form 
 //need to update the bootstrap form to react-bootstrap!!! 
 //have some '' be numbers only 
 //need functions for lanuages, 
@@ -23,6 +25,17 @@ export const NewCharacterForm = (props) => {
     const [path, setPath] = useState(''); //need to be from a path array
     const [extraInfo, setExtraInfo] = useState('');
 
+    const lanuages = 
+    ['Vostra: Most commonly spoken language. (note: not all races speak it.)',
+    'Faerie: Language spoken by races more inclined to be tricksters. (Fairies, Changelings, Goblins etc)', 
+    'Tzun: Language of the Elves',
+    'Tzut: Language of the Half-Elves, an offshoot of Tzun. Uses the same script, but different sounds',
+    'Kallahk: Language of Dragons and Draconic creatures.',
+    'Ocrate: Language of Orcs, Giants, and Ogres',
+    'Vay’Kahn: Language of Demons and most Demonic entities',
+    'Nekrain: Language of the Undead',
+    'Xallas: Language of tribal races, usually reptilian.'];
+
     const alignments = ['Lawful good', 'Neutral good', 'Chaotic good', 'Lawful neutral', 'True neutral', 'Chaotic neutral', 'Lawful evil', 'Neutral evil', 'Chaotic evil', 'Unaligned'];
     const handleSubmit = (event) => {
         event.preventDefault();
@@ -34,6 +47,7 @@ export const NewCharacterForm = (props) => {
     return (
         <form onSubmit={handleSubmit}>
             <div className="form-group">
+                <Container>
                 <label htmlFor="nameInput"><h5>Character's name</h5></label>
                 <input name="name" value={name} type="text" className="form-control" id="nameInput" 
                     onChange={(e) => setName(e.target.value)} />
@@ -133,7 +147,7 @@ export const NewCharacterForm = (props) => {
                 <input name="extraInfo" type="text" value={extraInfo} className="form-control" id="otherextraInfo" 
                     onChange={(e) => setExtraInfo(e.target.value)} />
                 </div> 
-                    
+                </Container>
             </div>
             <button type="submit" className="btn btn-primary">Add Character</button>
         </form>

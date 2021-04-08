@@ -6,7 +6,7 @@ import React from 'react';
 export default class HomePage extends React.Component {
     render() {
         return <h1> Welcome to Burning Aftermath</h1>,
-        <p> Welcome to Burning Aftermath, placeholder text until i know this works haaha</p>
+        <h1> Welcome to Burning Aftermath, placeholder text until i know this works haaha</h1>
     }
 }
 

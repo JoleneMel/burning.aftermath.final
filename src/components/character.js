@@ -5,7 +5,7 @@ import ButtonGroup from 'react-bootstrap/ButtonGroup';
 import EditCharacterForm from './edit-character';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
-
+import Container from 'react-bootstrap/Container';
 
 //want to add the accordian so this is displayed on a seperate page entirely 
 export default class CharacterCard extends React.Component {
@@ -28,20 +28,21 @@ export default class CharacterCard extends React.Component {
     render() {
         return (
             <div>
-            <Card>
-                <Card.Header> Character Name: {this.props.name} Alignment: {this.props.alignment} HP: {this.props.hp}  Path: {this.props.path}</Card.Header>
+            <Container>
+            <Card id="character-card">
+                <Card.Header> <h4>Character Name: {this.props.name} <br></br> Alignment: {this.props.alignment} <br></br> HP: {this.props.hp}  <br></br> Path: {this.props.path}</h4></Card.Header>
                 <Card.Body>
-                <Card.Subtitle>Height: {this.props.height} Weight: {this.props.weight}  Race: {this.props.race} </Card.Subtitle>
+                <Card.Subtitle><h5>Height: {this.props.height} <br></br> Weight: {this.props.weight}  <br></br> Race: {this.props.race} </h5></Card.Subtitle>
                 <ListGroup variant="flush">
-                    Ability Scores:
-                <ListGroup.Item>Strength: {this.props.strength}</ListGroup.Item>
-                <ListGroup.Item>dexterity: {this.props.dexterity}</ListGroup.Item>
-                <ListGroup.Item>consititiution: {this.props.consititiution}</ListGroup.Item>
-                <ListGroup.Item>intelligence: {this.props.intelligence}</ListGroup.Item>
-                <ListGroup.Item>wisdom: {this.props.wisdom}</ListGroup.Item>
-                <ListGroup.Item>charisma: {this.props.charisma}</ListGroup.Item>
+                    <h5>Ability Scores:</h5>
+                <ListGroup.Item variant="danger"><h6>Strength: {this.props.strength}</h6></ListGroup.Item>
+                <ListGroup.Item variant="warning"><h6>Dexterity: {this.props.dexterity}</h6></ListGroup.Item>
+                <ListGroup.Item variant="success"><h6>Consititiution: {this.props.consititiution}</h6></ListGroup.Item>
+                <ListGroup.Item variant="primary"><h6>Intelligence: {this.props.intelligence}</h6></ListGroup.Item>
+                <ListGroup.Item variant="secondary"><h6>Wisdom: {this.props.wisdom}</h6></ListGroup.Item>
+                <ListGroup.Item variant="dark"><h6>Charisma: {this.props.charisma}</h6></ListGroup.Item>
                 </ListGroup>
-                <Card.Text>Extra Info about Character: {this.props.extraInfo}</Card.Text>
+                <Card.Text><h5>Extra Info about Character: {this.props.extraInfo}</h5></Card.Text>
                 {/* <Card.Footer>Lanuages known: {this.props.lanuages}</Card.Footer> */}
                 </Card.Body>
                 <EditCharacterForm {...this.props} updateCharacter={this.props.updateCharacter} />
@@ -49,7 +50,17 @@ export default class CharacterCard extends React.Component {
                 <ButtonGroup>
                     <Button variant= "btn btn-danger" onClick={this.handleDeleteClick}>Delete Character</Button>
                 </ButtonGroup>
+                </Container>
             </div>
         );
     }
 }
+
+{/* <ListGroup.Item variant="primary">Primary</ListGroup.Item>
+<ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
+<ListGroup.Item variant="success">Success</ListGroup.Item>
+<ListGroup.Item variant="danger">Danger</ListGroup.Item>
+<ListGroup.Item variant="warning">Warning</ListGroup.Item>
+<ListGroup.Item variant="info">Info</ListGroup.Item>
+<ListGroup.Item variant="light">Light</ListGroup.Item>
+<ListGroup.Item variant="dark">Dark</ListGroup.Item> */}

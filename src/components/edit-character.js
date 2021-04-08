@@ -1,6 +1,7 @@
 import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown';
+import Container from 'react-bootstrap/Container';
 // import alignments from './new-character-form';
 // import Form from 'react-bootstrap/Form';
 // import Button from 'react-bootstrap/Button';
@@ -63,8 +64,10 @@ export default class EditCharacterForm extends React.Component {
             {/*for furture style*/}
             {/* <h6 onClick={this.onClick.bind(this)}>Edit </h6> */}
             {/* <form onSubmit={this.handleSubmit} ref={ref => {this.myForm=ref;}} > */}
+            <Container>
             <form onSubmit={this.handleSubmit} ref={ref => {this.myForm=ref;}} >
                 <div className="form-group">
+                    
                     <label htmlFor="nameInput">Character's name</label>
                     <input name="name" value={this.state.name} type="text" className="form-control" id="nameInput" onChange={this.handleChange} />
                 </div>
@@ -143,8 +146,9 @@ export default class EditCharacterForm extends React.Component {
                     <label htmlFor="extraInfoInput">extra Info</label>
                     <input name="extraInfo" type="text" value={this.state.extraInfo} className="form-control" id="otherextraInfo" onChange={this.handleChange} />
                 </div>
-                <button type="submit" className="btn btn-primary">Update File</button>
-            </form>
+                <button type="submit" className="btn btn-primary">Update Character</button>
+                </form>
+            </Container>
             </div>
         );
     }
