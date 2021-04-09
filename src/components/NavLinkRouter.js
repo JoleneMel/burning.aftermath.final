@@ -15,7 +15,7 @@ import RuleBook from './ruleBook';
 import CreationRules from './creation.rules';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { NewCharacterForm } from './new-character-form';
-import CharacterCard from './character';
+import CharacterList from './character-List';
 import GMRules from './gm-rules';
 
 //Navbar that will organize the routing, while also being extremely basic at the moment 
@@ -26,8 +26,8 @@ export default function NavLinkRouter() {
             
                 <Nav className="navBar">
                     <NavLink to= "/home" exact={true}><h2 id="home"> Home </h2></NavLink>{/* note use of `exact` here! */} 
-                    <NavDropdown title="GM" id="gm-nav-dropdown">
-                        <NavDropdown.Item href="/projectlist">Create a Campaign</NavDropdown.Item>
+                    <NavDropdown title="Homepage" id="gm-nav-dropdown">
+                        <NavDropdown.Item href="/projectlist">Project List</NavDropdown.Item>
                     </NavDropdown>
                     <NavDropdown title="Players" id="player-nav-dropdown">
                         <NavDropdown.Item href="/charactercreate">Create a Character</NavDropdown.Item>
@@ -50,7 +50,7 @@ export default function NavLinkRouter() {
                     <NewCharacterForm /> 
                 </Route>
                 <Route path="/createdcharacters">
-                    <CharacterCard /> 
+                    <CharacterList /> 
                 </Route>
                 <Route path="/characterrulebook">
                     <CreationRules /> 

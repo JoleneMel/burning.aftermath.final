@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Container from 'react-bootstrap/Container';
+import { burningAftermathService } from '../rest/BurningAftermathApi';
 
 //step by step wizard form 
 //need to update the bootstrap form to react-bootstrap!!! 
@@ -25,23 +26,39 @@ export const NewCharacterForm = (props) => {
     const [path, setPath] = useState(''); //need to be from a path array
     const [extraInfo, setExtraInfo] = useState('');
 
-    const lanuages = 
-    ['Vostra: Most commonly spoken language. (note: not all races speak it.)',
-    'Faerie: Language spoken by races more inclined to be tricksters. (Fairies, Changelings, Goblins etc)', 
-    'Tzun: Language of the Elves',
-    'Tzut: Language of the Half-Elves, an offshoot of Tzun. Uses the same script, but different sounds',
-    'Kallahk: Language of Dragons and Draconic creatures.',
-    'Ocrate: Language of Orcs, Giants, and Ogres',
-    'Vay’Kahn: Language of Demons and most Demonic entities',
-    'Nekrain: Language of the Undead',
-    'Xallas: Language of tribal races, usually reptilian.'];
-
+    // const lanuages = 
+    // ['Vostra: Most commonly spoken language. (note: not all races speak it.)',
+    // 'Faerie: Language spoken by races more inclined to be tricksters. (Fairies, Changelings, Goblins etc)', 
+    // 'Tzun: Language of the Elves',
+    // 'Tzut: Language of the Half-Elves, an offshoot of Tzun. Uses the same script, but different sounds',
+    // 'Kallahk: Language of Dragons and Draconic creatures.',
+    // 'Ocrate: Language of Orcs, Giants, and Ogres',
+    // 'Vay’Kahn: Language of Demons and most Demonic entities',
+    // 'Nekrain: Language of the Undead',
+    // 'Xallas: Language of tribal races, usually reptilian.'];
+    // this.addNewCharacter = this.addNewCharacter.bind(this);
     const alignments = ['Lawful good', 'Neutral good', 'Chaotic good', 'Lawful neutral', 'True neutral', 'Chaotic neutral', 'Lawful evil', 'Neutral evil', 'Chaotic evil', 'Unaligned'];
     const handleSubmit = (event) => {
         event.preventDefault();
         console.log('Props are' + props);
-        props.addNewCharacter({name, height, weight, alignment, race, strength, dexterity, consititiution, intelligence, wisdom, charisma, hp, path, extraInfo});
+        addNewCharacter({name, height, weight, alignment, race, strength, dexterity, consititiution, intelligence, wisdom, charisma, hp, path, extraInfo});
     }
+
+            const _refreshData = async() => {
+            const characters = await burningAftermathService.getAll();
+            }
+
+            function componentDidMount() {
+            _refreshData();
+            }
+
+    const addNewCharacter = async(character) => {
+    console.log('inside addNewCharacter function app.js');
+    await burningAftermathService.create(character);
+    _refreshData();
+  }
+
+
 
     //want to make this a multi-step form https://css-tricks.com/the-magic-of-react-based-multi-step-forms/
     return (

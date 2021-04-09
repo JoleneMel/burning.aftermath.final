@@ -2,6 +2,7 @@ import React from 'react';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import Dropdown from 'react-bootstrap/Dropdown';
 import Container from 'react-bootstrap/Container';
+import { burningAftermathService } from '../rest/BurningAftermathApi';
 // import alignments from './new-character-form';
 // import Form from 'react-bootstrap/Form';
 // import Button from 'react-bootstrap/Button';
@@ -51,14 +52,26 @@ export default class EditCharacterForm extends React.Component {
         });
     }
 
+
+
+//   deleteCharacter = async(id) => {
+//     await burningAftermathService.delete(id);
+//     this._refreshData();
+//   }
+// }
+
     handleSubmit(event) {
-        this.props.updateCharacter(this.state);
+        this.updateCharacter(this.state);
         event.preventDefault();
     }
 
     
 // nameX, heightX, weightX, alignmentX, raceX, /strength, dexterity, consititiution, intelligence, wisdom, charisma,/ hpX, lanuages, pathX, extraInfo
     render() {
+                    const updateCharacter = async(character) => {
+                    await burningAftermathService.update(character);
+                    this._refreshData();
+                }
         return (
             <div>
             {/*for furture style*/}

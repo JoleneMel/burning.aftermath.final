@@ -6,26 +6,30 @@ import EditCharacterForm from './edit-character';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
+import { burningAftermathService } from '../rest/BurningAftermathApi';
 
 //want to add the accordian so this is displayed on a seperate page entirely 
 export default class CharacterCard extends React.Component {
     constructor(props) {
         super(props);
-
         this.handleDeleteClick = this.handleDeleteClick.bind(this);
         this.updateCharacter = this.updateCharacter.bind(this);
+        this.deleteCharacter = this.deleteCharacter.bind(this);
     }
 
     handleDeleteClick() {
-        this.props.deleteCharacter(this.props._id);
+        this.deleteCharacter(this.props._id);
     }
 
     updateCharacter(character) {
-        this.props.updateCharacter(character);
+        this.updateCharacter(character);
     }
 
     // nameX, heightX, weightX, alignmentX, raceX, /strength, dexterity, consititiution, intelligence, wisdom, charisma,/ hpX, lanuages, pathX, extraInfo
     render() {
+
+    
+                
         return (
             <div>
             <Container>
