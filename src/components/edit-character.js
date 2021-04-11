@@ -53,25 +53,14 @@ export default class EditCharacterForm extends React.Component {
     }
 
 
-
-//   deleteCharacter = async(id) => {
-//     await burningAftermathService.delete(id);
-//     this._refreshData();
-//   }
-// }
-
     handleSubmit(event) {
-        this.updateCharacter(this.state);
+        this.props.updateCharacter(this.state);
         event.preventDefault();
     }
 
-    
-// nameX, heightX, weightX, alignmentX, raceX, /strength, dexterity, consititiution, intelligence, wisdom, charisma,/ hpX, lanuages, pathX, extraInfo
     render() {
-                    const updateCharacter = async(character) => {
-                    await burningAftermathService.update(character);
-                    this._refreshData();
-                }
+
+                
         return (
             <div>
             {/*for furture style*/}

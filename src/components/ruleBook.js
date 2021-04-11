@@ -412,6 +412,20 @@ export default class RuleBook extends React.Component {
                 </ul>
             </Media.Body>
             </Media>
+
+            <Media>
+            <Media.Body>
+                <h5>Shapeshifting: </h5>
+                <p>
+                You can shapeshift according to the rules of a shapeshifting power. Like all abilities, shapeshifting powers 
+                take 1 action to use. Armor you’re wearing does not change with you, except if otherwise stated. Things you are 
+                holding in your hands are dropped if you change into a form without hands. If you turn into an animal from a humanoid, 
+                your armor can  change to be absorbed into your form. You can decide that certain things remain separate from the animal 
+                form, such as a sheath and a weapon, or some types of armor. You make this decision when you change shape.
+                </p>
+            </Media.Body>
+            </Media>
+            
             <Media>
             <Media.Body>
                 <h4>Advice for GM’s and players: </h4>
@@ -619,139 +633,256 @@ export default class RuleBook extends React.Component {
             </Media> 
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Collect mana: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                knowledge magic
+                uses one action
+                get one (level) mana
+                max mana is Int + all magical skills
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Redirect Spell: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                knowledge magic
+                spell within 5(int) squares, can only use one redirect on a spell unless the target has moved
+                uses one mana (these use mana because they need to be able to happen on other spell casters turns.)
+                Int + magical knowledge(using magical knowledge makes it easier to infer information about the spells you are trying to manipulate.)
+                 vs. attack roll of spell
+                hit: choose new targets for the spell, effect as normal, with the attack roll being the your roll from above
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Copy Spell: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                knowledge magic
+                spell within 5 squares, can only use one copy on a particular named spell per round
+                uses one mana
+                Int + magical Knowledge vs. attack roll of spell
+                user of the spell can negate this roll if they desire
+                hit: copy the spell. you may use the spell immediately or save it for later. If you save it for later, but you will need to spend the action cost. 
+                Special: copies are not retained after an hour; copies not used are returned to the mana they started with(one each).
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Spit Poison: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Combat(Natural)
+                One action to ready, one to use.
+                Range: 10 squares
+                Target: 1 creature
+                Attack: Agility vs. Agility or Endurance
+                Hit: 1d6 + Agility bonus poison damage.
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Entombing Web: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Combat(Natural)
+                Two actions to ready, one to use.
+                Range: Melee
+                Target: 1 creature
+                Attack: Strength vs Strength or Agility
+                Hit: Target takes damage equal to your Strength bonus and is immobilized. A save of 10 + your level ends the immobilization. 
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Loosen Your Tongue: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Social(Natural)
+                Out of Combat Ability
+                Attack: Social vs. Endurance
+                Hit: Target gives up some secret.
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Spin Web: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Knowledge(Natural)
+                Four actions
+                Effect: Creates a large web to fill a feasible purpose.
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h3>Equipment </h3>
+                <h4>Proficiency: </h4>
+                <h5>
+                You need a feat to be proficient in weapons/armors!!! Please refer to the item-shop for specifics on weapons and armor.
+                </h5>
+            </Media.Body>
+            </Media>
+            <Media>
+            <Media.Body>
+                <h5>Shields: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Come in several styles, but two variations: Light and Heavy. A Heavy Shield adds its bonus to defense rolls to attacks targeting 
+                Endurance or Strength. A Light Shield adds its bonus to defense rolls to attacks targeting Agility or Endurance. A light shield 
+                leaves your hand free to have another one handed weapon or use a two-handed weapon, while a heavy shield does not.
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Armors: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Made of metal take cause you to take an extra 2 damage from Electric, Fire, and Ice attacks for each equipped piece of armor. Shields 
+                are a special case. You choose whether or not to use a shield during your defense attempt.
+
+                Armors made of Skins and cloth (Hide, Leather, Altercloth, etc) cause you to take an extra 2 damage from Fire and Acid attacks.
+
+                Helmets cause you to take an extra 2 damage from Sound or Sonic attacks.
                 </p>
             </Media.Body>
             </Media>
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Shields: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Shields come in several styles, but two variations: Light and Heavy. A Light Shield adds its bonus to defense rolls to attacks 
+                targeting Agility or Endurance. A light shield leaves your hand free to have another one handed weapon or use a two-handed weapon, 
+                while a heavy shield does not. A Heavy Shield adds its bonus to defense rolls to attacks targeting Endurance or Strength
                 </p>
             </Media.Body>
             </Media>
+
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Weapon Rules: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                A Heavy weapon adds the Strength Modifier and Combat rank to the attack rolls and just the Strength modifier to the Damage. A Light 
+                weapon adds the Agility Modifier and Combat rank to the attack rolls and just the Agility modifier to the Damage.
                 </p>
+                <ol>
+                    <li>
+                        <p>When you use a weapon with an ability or basic melee attack, specify what kind of damage you intend to do with that attack, 
+                            as certain weapons have several types of damage.</p>
+                    </li>
+                    <li>
+                        <h5>Critical Attacks/Weapons</h5>
+                        <p>All critical weapons (or attacks) do double damage if the attacker’s roll beats the defender’s roll by at least 5. A crit 
+                            for a weapon without the critical property must beat the defender’s roll by at least 10.</p>
+                    </li>
+                    <li>
+                        <h5>Bows and Slings</h5>
+                        <p>Cost no actions to load</p>
+                    </li>
+                    <li>
+                        <h5>All crossbows</h5>
+                        <p>Cost 1 action to load, unless stated otherwise</p>
+                    </li>
+                    <li>
+                    <h5>Shortbows, and Hand crossbows, and pistols</h5>
+                        <p>Can be used while mounted.</p>
+                    </li>
+                    <li>
+                    <h5>Longbows, Greatbows, Crossbows, Heavy crossbows, and arquebuses</h5>
+                        <p>Cannot be used while mounted. (Some Exceptions)</p>
+                    </li>
+                    <li>
+                    <h5>Whips</h5>
+                        <p>Deal nonlethal damage, meaning you only get knocked unconscious if you take your Hit Points or more damage by it. 
+                            If you take more than your Endurance modifier in damage, you are dominated by the user (A successful Endurance 
+                            save ends this effect.)</p>
+                    </li>
+                    <li>
+                        <p>All weapon damages listed here assume you are using a medium weapon. Increase the dice used by one type for each 
+                            size category larger, and decrease it for each category smaller.</p>
+                    </li>
+                    <li>
+                        <p>Using a weapon with [1 or 2 handed] with two hands gives you a +1 to attack rolls with that weapon.</p>
+                    </li>
+                </ol>
             </Media.Body>
             </Media>
+
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5> Improvised Attack: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Damage 1d3; Type Bludgeoning; 1 handed Improvised hand weapons that can be used one or two handed, that are used two handed 
+                grant the attacker a +1 bonus to the attack roll.
                 </p>
             </Media.Body>
             </Media>
+
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Mounts and Rules for Mounted Combat: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                A creature that can be used as a mount must be one size larger than the character attempting to use it. The mount must be either 
+                willing to be mounted or have no other choice, such as a creature under the effect of a mind control spell or a machine. 
+
+                You do not have much skill in using a mount for battle unless you have either (A) experience in doing so, or (B) you can come 
+                up with a good and agreeable reason for why your character would have such experience. (example: “I grew up training to ride 
+                beasts into battle, specifically my father’s Xivu.”) 
+
+                While mounted, you use your mount’s move speed instead of yours. You can have your mount attack instead of you on your turn. 
+                On its turn, the mount can attack. 
+                If/when you are attacked, the attacker chooses whether to hit you or the mount. An attack that targets multiple creatures can 
+                attack both.
+
+                Also, a mount does not have set ability scores, But it has a set minimum-maximum for starting level, depending on the mount. 
+                Certain types of mounts have a pool of abilities to choose from. Each mount can have 2 abilities. It is treated like a player 
+                character in terms of leveling.
                 </p>
             </Media.Body>
             </Media>
+
             <Media>
             <Media.Body>
-                <h5>Game board: </h5>
+                <h5>Some Mounts: </h5>
                 <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
+                Examples of some beasts that are often used for mounts
                 </p>
+                <ol>
+                    <li>
+                        <p>Pack Lizard</p>
+                    </li>
+                    <li>
+                        <p>Horse</p>
+                    </li>
+                    <li>
+                        <p>Griffon</p>
+                    </li>
+                    <li>
+                        <p>Hippogriff</p>
+                    </li>
+                    <li>
+                        <p>Monstrous Spider (Various kinds)</p>
+                    </li>
+                    <li>
+                        <p>Monstrous Insect (Various kinds)</p>
+                    </li>
+                    <li>
+                        <p>Giant Lizard (Various kinds)</p>
+                    </li>
+                    <li>
+                        <p>Xivu Patriarch</p>
+                    </li>
+                    <li>
+                        <p>Wyrm (various kinds)</p>
+                    </li>
+                    <li>
+                        <p>Krula: Large, solitary insect. Quick, but with a thin carapace. Ground-based.</p>
+                    </li>
+                </ol>
             </Media.Body>
             </Media>
-            <Media>
-            <Media.Body>
-                <h5>Game board: </h5>
-                <p>
-                Any square-based board. If you have something designed for RPGs, great, if not, oh well. Draw squares on a piece of
-                paper, there’s your board. Each square is five feet in the game world.
-                </p>
-            </Media.Body>
-            </Media>
+
             </Container>
             </div>
         );

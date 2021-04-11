@@ -6,22 +6,27 @@ export default class CharacterList extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-    characters : [],
-    [characters] : burningAftermathService.getAll()
+      characters : []
     }
-}
+      this.updateCharacter = this.updateCharacter.bind(this);
+      this.deleteCharacter = this.deleteCharacter.bind(this);
+      this.CharactersCards = this.CharactersCards.bind(this);
+    
+  }
 
            updateCharacter = async(character) => {
             await burningAftermathService.update(character);
             this._refreshData();
             }
 
-            CharactersCards = this.state.characters.map(character => {
+            CharactersCards() { 
+            return  this.state.characters.map(character => {
             return <CharacterCard {...character} key={character._id} 
             deleteCharacter={this.deleteCharacter} 
+            _refreshData={this._refreshData}
             updateCharacter={this.updateCharacter} />
             });
-
+          }
             deleteCharacter = async(id) => {
             await burningAftermathService.delete(id);
             this._refreshData();
@@ -39,8 +44,8 @@ export default class CharacterList extends React.Component {
 
     return (
             <div>
-            {/* <CharactersCards />  */}
+            {this.CharactersCards()} 
             </div>
         );
-    }
+    };
   }

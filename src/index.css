@@ -17,7 +17,7 @@ code {
 
 .navBar {
   background-color: rgb(187, 163, 25, .75);
-  padding: 5px;
+  padding: 15px;
 }
 
 #home {
@@ -33,4 +33,40 @@ code {
 
 #character-card {
   background-color: rgba(236, 225, 163, 0.5) !important;
+}
+
+#completed {
+  background-color: lightgreen;
+}
+
+#requirenment {
+  background-color: lightskyblue;
+}
+
+#analysising {
+  background-color: rgb(241, 241, 141);
+}
+
+#debugging {
+  background-color: lightpink;
+}
+
+#planning {
+  background-color: lightsalmon;
+}
+
+Table {
+  background-color: palegoldenrod;
+}
+
+#home-nav-dropdown {
+  font-size: x-large;
+}
+
+#player-nav-dropdown {
+  font-size: x-large;
+}
+
+#gm-nav-dropdown {
+  font-size: x-large;
 }

@@ -2,7 +2,7 @@
 import React from 'react';
 import Container from 'react-bootstrap/esm/Container';
 import Media from 'react-bootstrap/Media';
-//reorganize later 
+
 export default class GMRules extends React.Component {
     render () {
         return (

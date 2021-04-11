@@ -1,1 +1,0 @@
-//table for the requirenments of the project to be displayed on the homepage

@@ -140,6 +140,14 @@ export default class CreationRules extends React.Component {
                 </p>
             </Media.Body>
             </Media>
+            <Media>
+            <Media.Body>
+                <h5>Currency: </h5>
+                <p>
+                Each Character starts with 150 Zahlels to spend on equipment.
+                </p>
+            </Media.Body>
+            </Media>
             </Container>
             </div>
         );

@@ -6,31 +6,27 @@ import EditCharacterForm from './edit-character';
 import Card from 'react-bootstrap/Card';
 import ListGroup from 'react-bootstrap/ListGroup';
 import Container from 'react-bootstrap/Container';
-import { burningAftermathService } from '../rest/BurningAftermathApi';
 
-//want to add the accordian so this is displayed on a seperate page entirely 
+
+
 export default class CharacterCard extends React.Component {
     constructor(props) {
         super(props);
         this.handleDeleteClick = this.handleDeleteClick.bind(this);
-        this.updateCharacter = this.updateCharacter.bind(this);
-        this.deleteCharacter = this.deleteCharacter.bind(this);
     }
 
     handleDeleteClick() {
-        this.deleteCharacter(this.props._id);
+        console.log(this.props._id);
+        this.props.deleteCharacter(this.props._id);
     }
 
-    updateCharacter(character) {
-        this.updateCharacter(character);
+    componentDidMount() {
+    this.props._refreshData();
     }
 
-    // nameX, heightX, weightX, alignmentX, raceX, /strength, dexterity, consititiution, intelligence, wisdom, charisma,/ hpX, lanuages, pathX, extraInfo
     render() {
 
-    
-                
-        return (
+    return (
             <div>
             <Container>
             <Card id="character-card">
@@ -59,12 +55,3 @@ export default class CharacterCard extends React.Component {
         );
     }
 }
-
-{/* <ListGroup.Item variant="primary">Primary</ListGroup.Item>
-<ListGroup.Item variant="secondary">Secondary</ListGroup.Item>
-<ListGroup.Item variant="success">Success</ListGroup.Item>
-<ListGroup.Item variant="danger">Danger</ListGroup.Item>
-<ListGroup.Item variant="warning">Warning</ListGroup.Item>
-<ListGroup.Item variant="info">Info</ListGroup.Item>
-<ListGroup.Item variant="light">Light</ListGroup.Item>
-<ListGroup.Item variant="dark">Dark</ListGroup.Item> */}
