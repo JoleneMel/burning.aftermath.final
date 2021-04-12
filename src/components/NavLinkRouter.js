@@ -3,7 +3,7 @@ import {
     BrowserRouter as Router,
     Switch,
     Route,
-    // NavLink
+    NavLink
 } from 'react-router-dom';
 import HomePage from './homePage';
 import '../../node_modules/bootstrap/dist/css/bootstrap.min.css';
@@ -17,8 +17,9 @@ import GMRules from './gm-rules';
 import ItemShop from './item-shop';
 import ProjectTables from './project-tables';
 import { GMNewCampaignForm } from './gm-campaign-form';
-import CampaignCard from './gm-campaign';
+// import CampaignCard from './gm-campaign';
 import Container from 'react-bootstrap/Container'
+import CampaignList from './gm-campaign-list';
 
 
 export default function NavLinkRouter() {
@@ -26,8 +27,8 @@ export default function NavLinkRouter() {
         <Router>
             <Container>
                 <Nav className="navBar">
-                    
-                    <NavDropdown title="Homepage" id="home-nav-dropdown">
+                <NavLink to= "/" exact={true}></NavLink>
+                    <NavDropdown title="Homepage" id="home-nav-dropdown"> 
                         <NavDropdown.Item href="/homepage">Homepage</NavDropdown.Item>
                         <NavDropdown.Item href="/projecttables">Project Tables</NavDropdown.Item>
                         <NavDropdown.Item href="/rulebook">RuleBook</NavDropdown.Item>
@@ -65,7 +66,7 @@ export default function NavLinkRouter() {
                     <GMNewCampaignForm />
                 </Route>
                 <Route path="/createdcampaign">
-                    <CampaignCard />
+                    <CampaignList />
                 </Route>
                 <Route path="/gmrulebook">
                     <GMRules />
@@ -81,9 +82,20 @@ export default function NavLinkRouter() {
                 <Route path="/rulebook">
                     <RuleBook />
                 </Route>
+
+                <Route path="/">
+                    <Home />
+                </Route>
             </Switch>
             </Container>
         </Router>
     )
 }
 
+function Home() {
+    return (
+        <div>
+        <HomePage />
+        </div>
+    )
+}

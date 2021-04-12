@@ -130,21 +130,21 @@ export default class CreationRules extends React.Component {
             </Media>
             <Media>
             <Media.Body>
-                <h5>Character Race: </h5>
+                <h5>Currency: </h5>
+                <p>
+                Each Character starts with 150 Zahlels to spend on equipment.
+                </p>
+            </Media.Body>
+            </Media>
+            <Media>
+            <Media.Body>
+                <h3>Character Race: </h3>
                 <p>
                 Some races start off with higher starting skills than others, and each race has its own racial feature(s). 
                 Being a Large creature: Too Big: You are unable to enter hallways or areas that are not at least 2 squares wide without squeezing in, 
                 making it easier for you to get hit. Also, equipment you get for a creature your size costs an additional 25% Zahlels. Large weapons 
                 deal an extra d6 damage but get a -2 to hit against mediums, -4 against smalls and a -6 against tinies. A two handed normal weapon can 
                 be used as a one handed large weapon, but does not gain the damage buff.
-                </p>
-            </Media.Body>
-            </Media>
-            <Media>
-            <Media.Body>
-                <h5>Currency: </h5>
-                <p>
-                Each Character starts with 150 Zahlels to spend on equipment.
                 </p>
             </Media.Body>
             </Media>

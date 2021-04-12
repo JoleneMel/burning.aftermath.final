@@ -20,7 +20,7 @@ class BurningAftermathService {
                 race: character.race,
                 strength: character.strength,
                 dexterity: character.dexterity,
-                consititiution: character.consititiution,
+                constitution: character.constitution,
                 intelligence: character.intelligence,
                 wisdom: character.wisdom,
                 charisma: character.charisma,

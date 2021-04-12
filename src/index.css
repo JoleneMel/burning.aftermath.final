@@ -16,8 +16,9 @@ code {
 }
 
 .navBar {
-  background-color: rgb(187, 163, 25, .75);
-  padding: 15px;
+  background-color: rgba(146, 131, 45, 0.6);
+  padding: 10px;
+  border: solid 5px rgba(255, 254, 175, 0.5);
 }
 
 #home {
@@ -60,13 +61,71 @@ Table {
 }
 
 #home-nav-dropdown {
+  align-items: left;
   font-size: x-large;
+  text-shadow: rgb(255, 208, 0) 1px 0 10px;
+  color:ivory;
+
 }
 
 #player-nav-dropdown {
+  align-items: center;
   font-size: x-large;
+  text-shadow: rgb(255, 208, 0) 1px 0 10px;
+  color:ivory;
+
 }
 
 #gm-nav-dropdown {
+  align-items: right;
   font-size: x-large;
+  text-shadow: rgb(255, 204, 0) 1px 0 10px;
+  color:ivory;
+
+}
+
+#intro {
+  background-color: rgba(126, 61, 1, 0.4);
+  font-size: 20px;
+  border: solid 25px rgba(209, 76, 24, 0.5);
+  font-style: oblique;
+  font-weight: 500;
+  text-shadow: rgb(255, 204, 0) 1px 0 10px;
+  color:ivory;
+}
+
+#charactersheet {
+  background-color: rgba(150, 72, 0, 0.4);
+  border: solid 25px rgba(209, 76, 24, 0.5);
+  color:rgb(39, 21, 0);
+}
+
+#dropdown-basic {
+  width: 200px;
+}
+
+#otherextraInfo {
+  height: 200px;
+}
+
+#character-card {
+  background-color: rgb(255, 204, 0, 0.5) !important;
+  color:rgb(94, 55, 12);
+  border: solid 15px rgba(121, 44, 8, 0.5);
+}
+
+#notesInput {
+  height: 200px;
+}
+
+#gmform {
+  background-color: rgba(212, 128, 2, 0.4);
+  border: solid 25px rgba(255, 15, 15, 0.5);
+  color:rgb(73, 39, 1);
+}
+
+#gmcard {
+  background-color: rgba(212, 128, 2, 0.4) !important;
+  color:rgb(94, 55, 12);
+  border: solid 15px rgba(109, 0, 0, 0.5);
 }

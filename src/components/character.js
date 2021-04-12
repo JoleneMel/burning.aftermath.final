@@ -37,7 +37,7 @@ export default class CharacterCard extends React.Component {
                     <h5>Ability Scores:</h5>
                 <ListGroup.Item variant="danger"><h6>Strength: {this.props.strength}</h6></ListGroup.Item>
                 <ListGroup.Item variant="warning"><h6>Dexterity: {this.props.dexterity}</h6></ListGroup.Item>
-                <ListGroup.Item variant="success"><h6>Consititiution: {this.props.consititiution}</h6></ListGroup.Item>
+                <ListGroup.Item variant="success"><h6>Constitution: {this.props.constitution}</h6></ListGroup.Item>
                 <ListGroup.Item variant="primary"><h6>Intelligence: {this.props.intelligence}</h6></ListGroup.Item>
                 <ListGroup.Item variant="secondary"><h6>Wisdom: {this.props.wisdom}</h6></ListGroup.Item>
                 <ListGroup.Item variant="dark"><h6>Charisma: {this.props.charisma}</h6></ListGroup.Item>
@@ -46,10 +46,10 @@ export default class CharacterCard extends React.Component {
                 {/* <Card.Footer>Lanuages known: {this.props.lanuages}</Card.Footer> */}
                 </Card.Body>
                 <EditCharacterForm {...this.props} updateCharacter={this.props.updateCharacter} />
-            </Card>
                 <ButtonGroup>
-                    <Button variant= "btn btn-danger" onClick={this.handleDeleteClick}>Delete Character</Button>
+                    <Button variant= "btn btn-danger" id= "deleteButton" onClick={this.handleDeleteClick}>Delete Character</Button>
                 </ButtonGroup>
+            </Card>
                 </Container>
             </div>
         );

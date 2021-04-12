@@ -13,25 +13,25 @@ export default class CampaignCard extends React.Component {
         super(props);
 
         this.handleDeleteClick = this.handleDeleteClick.bind(this);
-        this.updateCampaign = this.updateCampaign.bind(this);
     }
 
     handleDeleteClick() {
         this.props.deleteCampaign(this.props._id);
     }
 
-    updateCampaign(campaign) {
-        this.props.updateCampaign(campaign);
+    componentDidMount() {
+        this.props._refreshData();
     }
 
     render() {
         return (
             <Container>
-                <Card>
-                    <Card.Header>GM: {this.props.gameMaster}, Campaign Name: {this.props.campaignName}</Card.Header>
+                <Card id="gmcard">
+                    <Card.Header><h4>GM: {this.props.gameMaster},<br></br> Campaign Name: {this.props.campaignName}</h4></Card.Header>
                     <Card.Body>
-                        <Card.Subtitle> Kingdom: {this.props.kingdom}</Card.Subtitle>
-                        <Card.Text>Description: {this.props.description} Important NPCs: {this.props.npcs} Notes: {this.props.notes}</Card.Text>
+                        <Card.Subtitle><h5>Kingdom: {this.props.kingdom}</h5></Card.Subtitle>
+                        <Card.Text><h5>Description: {this.props.description}<br></br> Important NPCs: {this.props.npcs}<br></br> 
+                        Notes: {this.props.notes}</h5></Card.Text>
                     </Card.Body>
                     <EditCampaignForm {...this.props} updateCampaign={this.props.updateCampaign} />
                 <ButtonGroup>

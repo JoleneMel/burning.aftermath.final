@@ -8,8 +8,7 @@ import '../../node_modules/bootstrap/dist/css/bootstrap.css';
 export default class ProjectTables extends React.Component {
     render () {
         return(
-            <Container>
-            {/* <h3>Color Key</h3> */}
+            <Container><br></br>
         <Table>
             <thead>
                 <tr>
@@ -39,10 +38,9 @@ export default class ProjectTables extends React.Component {
                 <td>Planning Phase</td>
                 </tr>
             </tbody>
-            </Table>
+            </Table><br></br>
 
             <Table>
-            {/* <h4>Project Requirenments</h4> */}
             <thead>
                 <tr>
                 <th><h5>#</h5></th>
@@ -54,7 +52,8 @@ export default class ProjectTables extends React.Component {
                 <tr>
                 <td>1</td>
                 <td id="completed">Use an Api or multiple Apis to create a react app</td>
-                <td id="requirenment">https://crudcrud.com/api/9808c8e15bf34de8bf4c2c652aa1133c/burningaftermath</td>
+                <td id="requirenment">https://crudcrud.com/api/9808c8e15bf34de8bf4c2c652aa1133c/burningaftermath
+                https://crudcrud.com/api/9808c8e15bf34de8bf4c2c652aa1133c/campaigns</td>
                 </tr>
                 <tr>
                 <td>2</td>
@@ -69,12 +68,12 @@ export default class ProjectTables extends React.Component {
                 <tr>
                 <td>4</td>
                 <td id="completed">Contain at least 10 components</td>
-                <td id="requirenment">Total Components created (NEED TO ADD THIS IN)</td>
+                <td id="requirenment">Total Components created 18 completed components, 3 are still under development </td>
                 </tr>
                 <tr>
                 <td>5</td>
                 <td id="completed">Allow for all CRUD operations</td>
-                <td id="requirenment">You can do that with your character creation</td>
+                <td id="requirenment">You can do that with your character creation and campaign creation!</td>
                 </tr>
             </tbody>
             </Table>
