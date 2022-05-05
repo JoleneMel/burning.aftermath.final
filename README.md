@@ -9,3 +9,8 @@ Master is the final branch, please refer to that branch.
 
 
 Note try to make this working again (probably by adding a new api link) or seeing if I can do it myself
+
+
+Planning on remaking app with new react.js(like the new router)
+
+Planning to make an angular version as well.
